@@ -90,7 +90,7 @@ tokenizer.save("mymodel") # writes mymodel.model and mymodel.vocab
 tokenizer.load("mymodel.model") # loads the model back, the vocab is just for vis
 ```
 
-If you instead want to follow along with OpenAI did for their text tokenizer, it's a good idea to adopt their approach of using regex pattern to split the text by categories. The GPT-4 pattern is a default with the `RegexTokenizer`, so you'd simple do something like:
+If you instead want to follow along what OpenAI did for their text tokenizer, it's a good idea to adopt their approach of using regex a pattern to split the text by categories. The GPT-4 pattern is a default with the `RegexTokenizer`, so you'd simply do something like:
 
 ```python
 from minbpe import RegexTokenizer
@@ -114,7 +114,7 @@ tokenizer.register_special_tokens({"<|endoftext|>": 32768})
 tokenizer.encode("<|endoftext|>hello world", allowed_special="all")
 ```
 
-You can of course add more tokens after that as well, as you like. Finally, I'd like to stress that I tried hard to keep the code itself clean, readable and hackable. You should not have feel scared to read the code and understand how it works. The tests are also a nice place to look for more usage examples. That reminds me:
+You can of course add more tokens after that as well, as you like. Finally, I'd like to stress that I tried hard to keep the code itself clean, readable and hackable. You should not feel scared to read the code and understand how it works. The tests are also a nice place to look for more usage examples. That reminds me:
 
 ## tests
 
